@@ -1,0 +1,27 @@
+Filter Result via - <input type="text" [(ngModel)]="searchCriteria" placeholder="enter name.."/>
+<h2>
+  <!-- interpolation -->
+  {{ title }}
+  <div class="float-right">
+    <a href="#" (click)="hiddenAddUserForm = false" [hidden]="!hiddenAddUserForm">Add</a><a href="#" (click)="hiddenAddUserForm = true" [hidden]="hiddenAddUserForm">Close</a> | <a href="#" (click)="getList()">Refresh</a>
+  </div>
+</h2>
+<add-user [hidden]="hiddenAddUserForm"></add-user>
+<ul class="data-item" *ngIf="dataList && dataList.length">
+  <li *ngFor="#item of dataList | search : searchCriteria ">
+    <div> Name - <em>{{ item.name }}</em> </div>
+    <div> Age - <em>{{ item.age }}</em> </div>
+    <div class="float-right">
+      <a href="#" (click)="itemDetails(item._id)">Details</a> |
+      <a href="#" (click)="deleteItem(item._id)">Delete</a>
+    </div>
+    <br>
+  </li>
+</ul>
+<p class="notification" [hidden]="!error">
+  <span class="notification-text error">{{ error }}</span>
+</p>
+<p class="notification" [hidden]="!result && result !== 'OK'">
+  <span class="notification-text success">Record deleted successfully.</span>
+</p>
+<user-details [dataDetails]="detailData"></user-details>

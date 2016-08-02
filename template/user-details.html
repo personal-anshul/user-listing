@@ -1,0 +1,17 @@
+<div class="user-details" *ngIf="dataDetails && dataDetails.length">
+  <h3>User Details - </h3>
+  <table border="1" *ngFor="#item of dataDetails">
+    <tr>
+      <td>Name</td>
+      <td>{{ item.name | uppercase }}</td>
+    </tr>
+    <tr>
+      <td>Age</td>
+      <td>{{ item.age }}</td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td>{{ item.password }}</td>
+    </tr>
+  </table>
+</div>

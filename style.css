@@ -1,0 +1,63 @@
+body {
+  margin: 0 auto;
+  width: 500px;
+}
+table {
+  width: 100%
+}
+a {
+  font-size: 12px;
+  vertical-align: middle;
+}
+.float-right {
+  float: right;
+}
+.data-item {
+  margin: 0;
+  padding: 0;
+}
+.data-item li {
+  border: 1px solid;
+  list-style-type: none;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.user-details {
+  background: #bfdce4;
+  border: 1px solid;
+  margin-bottom: 50px;
+  padding: 10px;
+}
+.form-input {
+  background: transparent;
+  border: 0 none;
+  outline: none;
+  padding: 5px;
+  width: 97%;
+}
+.add-user {
+  background: #f1e3f7;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  padding: 10px 20px 25px;
+}
+.notification {
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  width: 500px;
+}
+.notification-text {
+  background: #cce2b1;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 10px;
+}
+.error {
+  color: red;
+}
+.success {
+  color: #347308;
+}
