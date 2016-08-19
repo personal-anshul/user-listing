@@ -1,4 +1,6 @@
 .git
+*.map
+app/*.js
+pipes/*.js
+service/*.js
 node_modules/
-*.js
-*.js.map
